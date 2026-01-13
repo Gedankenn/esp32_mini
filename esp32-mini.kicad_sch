@@ -4038,18 +4038,6 @@
 		)
 		(uuid 991a5cd1-2baf-47d5-a257-4c3911a4dbac)
 	)
-	(text "Geo_Pro Lite"
-		(exclude_from_sim no)
-		(at 195.834 189.738 0)
-		(effects
-			(font
-				(size 1.56 1.56)
-				(thickness 0.254)
-				(bold yes)
-			)
-		)
-		(uuid "91f03716-5d9f-47c8-a705-fc646ede3599")
-	)
 	(text "USB-C"
 		(exclude_from_sim no)
 		(at 56.896 17.78 0)

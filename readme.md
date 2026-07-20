@@ -226,7 +226,29 @@ The result is a compact ESP32-C3 platform suitable for:
 
 ---
 
-## 10. Possible Future Improvements
+## 10. Revision History
+
+### v0.1.1 (2026-07-19)
+
+**Fixes applied:**
+- **AMS1117 tab (pad 4):** Changed from GND to 3V3 (VOUT). The SOT‑223 tab is VOUT in the fixed 3.3V AMS1117.
+- **C15 EN capacitor:** Changed from 1 µF 0402 to 10 µF 0603. With R6=10 kΩ this gives ~100 ms RC delay.
+- **C5 voltage rating:** 6.3 V → 10 V on the 5 V rail for proper safety margin.
+- **Standardized net names:** `Io0` → `IO0`, `gpio9` → `IO9`, `I01..I04` → `IO1..IO4`
+- **Silkscreen** updated to match new net names.
+
+### Recommended Next Steps (do in KiCad GUI)
+
+1. **Add debounce capacitor C16 (0.1 µF, 0402)** from IO9 (BOOT) to GND near SW1. Route tracks on PCB.
+2. **Add ESD protection** on USB D+/D−. Use USBLC6‑2 (SOT‑23‑6) or SRV05‑4 between D+/D− and GND near J3.
+3. **Add USB series termination** R7, R8 = 22 Ω (0603) on D+ and D− between J3 and U1. Mark as DNP — populate only if USB signal integrity issues arise.
+4. **Add 4× M3 mounting holes** (3.2 mm) at board corners: (69, 56), (99.5, 56), (69, 84.5), (99.5, 84.5).
+5. **AMS1117 stability:** Output capacitors are ceramic (very low ESR). AMS1117 requires ESR ≥ 0.1 Ω. Replace C1 with a 10 µF tantalum, or add a 1 Ω resistor in series with C1.
+6. **Run DRC** after all changes.
+
+---
+
+## 11. Possible Future Improvements
 
 * Replace AMS1117 with a high‑efficiency buck or low‑IQ LDO
 * Add ESD diodes on USB D+/D−

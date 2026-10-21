@@ -6,6 +6,19 @@
 
 ---
 
+## Repository contents
+
+| File | Content |
+|------|---------|
+| `esp32-mini.kicad_pro` | KiCad project (open this file) |
+| `esp32-mini.kicad_sch` | Schematic (saved with KiCad 10) |
+| `esp32-mini.kicad_pcb` | PCB layout (saved with KiCad 9 format) |
+| `esp32-mini.kicad_prl` | KiCad local project settings |
+
+The schematic was saved by KiCad 10, so it needs KiCad 10 or newer to open. Symbols come from the KiCad PCM SparkFun libraries plus project-specific `ESP32-C3-MINI-1-N4` and `AMS1117-3.3` symbols. No Gerbers, BOM export or firmware are included in the repository.
+
+---
+
 ## 1. Overview
 
 This board is designed as a minimal, robust ESP32-C3 platform focused on:

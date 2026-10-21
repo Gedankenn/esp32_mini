@@ -246,7 +246,7 @@ The result is a compact ESP32-C3 platform suitable for:
 **Fixes applied:**
 - **AMS1117 tab (pad 4):** Changed from GND to 3V3 (VOUT). The SOT‑223 tab is VOUT in the fixed 3.3V AMS1117.
 - **C15 EN capacitor:** Changed from 1 µF 0402 to 10 µF 0603. With R6=10 kΩ this gives ~100 ms RC delay.
-- **C5 voltage rating:** 6.3 V → 10 V on the 5 V rail for proper safety margin.
+- **C5 voltage rating:** 6.3 V → 10 V on the 5 V rail for proper safety margin. Only the PCB footprint was updated (`Voltage` = 10V). The schematic symbol is still `PCM_SparkFun-Capacitor:10uF_0603_6.3V_20%` with `Voltage` = 6.3V, so update the schematic (and BOM) before ordering.
 - **Standardized net names:** `Io0` → `IO0`, `gpio9` → `IO9`, `I01..I04` → `IO1..IO4`
 - **Silkscreen** updated to match new net names.
 

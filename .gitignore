@@ -1,0 +1,10 @@
+# KiCad automatic backups and caches
+*-backups/
+fp-info-cache
+_autosave-*
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.lck
+
+# VS Code Local History extension
+.history/
